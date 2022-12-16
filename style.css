@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkgray;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+}
+
+#cover {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+  cursor: none;
+  border-radius: 1rem;
+}
+
+#magnify {
+  display: none;
+  position: absolute;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0;
+  animation: scaleUp 200ms ease-in forwards;
+  border: 2px solid #e1e1e1;
+}
+
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
